@@ -20,8 +20,8 @@ private:
 public:
     vector<int> sum;
     int size;
-    PreSum(vector<int> nums);
-    ~PreSum();
+    PreSum(vector<int> nums) {PreSum::InitSum(nums);}
+    ~PreSum() {}
     vector<int> GetPreSum(){ return sum; }
     string ToString()
     {
@@ -35,8 +35,6 @@ public:
         return str;
     }
 };
-PreSum::PreSum(vector<int> nums) {PreSum::InitSum(nums);}
-PreSum::~PreSum() {}
 
 // Test
 int main()
